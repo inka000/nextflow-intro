@@ -1,0 +1,116 @@
+sept.-07 16:06:33.623 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:06:33.655 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:06:33.655 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/ileroy/miniconda3/bin/nextflow run coverage.nf
+sept.-07 16:06:33.694 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 16:06:33.702 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [exotic_knuth] - revision: 5352076aa2
+sept.-07 16:06:33.782 [main] DEBUG nextflow.Session - Session uuid: 6696a5f7-77f2-43a1-bcf7-ae2f975249c5
+sept.-07 16:06:33.783 [main] DEBUG nextflow.Session - Run name: exotic_knuth
+sept.-07 16:06:33.783 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 16:06:33.798 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 5527@lk-525a-wle-04 [172.20.24.225]
+  CPUs: 4 - Mem: 7,7 GB (2,8 GB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 16:06:33.844 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 16:06:33.951 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 16:06:33.957 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 16:06:33.958 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 16:06:34.133 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 16:06:34.152 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 16:06:34.309 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:06:34.310 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:06:34.315 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:06:34.317 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 16:06:34.321 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 16:06:34.325 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 16:06:34.325 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 16:06:34.332 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 16:06:34.467 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 16:06:34.469 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 16:06:34.485 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 16:06:34.485 [main] DEBUG nextflow.Session - Session await
+sept.-07 16:06:34.594 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 16:06:34.598 [Task submitter] INFO  nextflow.Session - [60/580abe] Submitted process > mapping (1)
+sept.-07 16:06:34.979 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: mapping (1); status: COMPLETED; exit: 1; error: -; workDir: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/work/60/580abe95467b23c100e80e99c126e3]
+sept.-07 16:06:35.005 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'mapping (1)'
+
+Caused by:
+  Process `mapping (1)` terminated with an error exit status (1)
+
+Command executed:
+
+  bowtie2 -q -1 ERR036019samp_1.fastq.gz-2 ERR036019samp_2.fastq.gz -x /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/data/db/FN433596 -S ERR036019samp.sam -p params.cpus
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+    -R <int>           for reads w/ repetitive seeds, try <int> sets of seeds (2)
+  
+   Paired-end:
+    -I/--minins <int>  minimum fragment length (0)
+    -X/--maxins <int>  maximum fragment length (500)
+    --fr/--rf/--ff     -1, -2 mates align fw/rev, rev/fw, fw/fw (--fr)
+    --no-mixed         suppress unpaired alignments for paired reads
+    --no-discordant    suppress discordant alignments for paired reads
+    --dovetail         concordant when mates extend past each other
+    --no-contain       not concordant when one mate alignment contains other
+    --no-overlap       not concordant when mates overlap at all
+  
+   Output:
+    -t/--time          print wall-clock time taken by search phases
+    --un <path>        write unpaired reads that didn't align to <path>
+    --al <path>        write unpaired reads that aligned at least once to <path>
+    --un-conc <path>   write pairs that didn't align concordantly to <path>
+    --al-conc <path>   write pairs that aligned concordantly at least once to <path>
+      (Note: for --un, --al, --un-conc, or --al-conc, add '-gz' to the option name, e.g.
+      --un-gz <path>, to gzip compress output, or add '-bz2' to bzip2 compress output.)
+    --quiet            print nothing to stderr except serious errors
+    --met-file <path>  send metrics to file at <path> (off)
+    --met-stderr       send metrics to stderr (off)
+    --met <int>        report internal counters & metrics every <int> secs (1)
+    --no-unal          suppress SAM records for unaligned reads
+    --no-head          suppress header lines, i.e. lines starting with @
+    --no-sq            suppress @SQ header lines
+    --rg-id <text>     set read group id, reflected in @RG line and RG:Z: opt field
+    --rg <text>        add <text> ("lab:value") to @RG line of SAM header.
+                       Note: @RG line only printed when --rg-id is set.
+    --omit-sec-seq     put '*' in SEQ and QUAL fields for secondary alignments.
+    --sam-no-qname-trunc Suppress standard behavior of truncating readname at first whitespace 
+                        at the expense of generating non-standard SAM.
+    --xeq              Use '='/'X', instead of 'M,' to specify matches/mismatches in SAM record.
+    --soft-clipped-unmapped-tlen Exclude soft-clipped bases when reporting TLEN
+  
+   Performance:
+    -p/--threads <int> number of alignment threads to launch (1)
+    --reorder          force SAM output order to match order of input reads
+    --mm               use memory-mapped I/O for index; many 'bowtie's can share
+  
+   Other:
+    --qc-filter        filter out reads that are bad according to QSEQ filter
+    --seed <int>       seed for random number generator (0)
+    --non-deterministic seed rand. gen. arbitrarily instead of using read attributes
+    --version          print version information and quit
+    -h/--help          print this usage message
+  Error: Encountered internal Bowtie 2 exception (#1)
+  Command: /home/sdv/m2bi/ileroy/miniconda3/bin/bowtie2-align-s --wrapper basic-0 -q -x /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/data/db/FN433596 -S ERR036019samp.sam ERR036019samp_2.fastq.gz -p params.cpus 
+  (ERR): bowtie2-align exited with value 1
+
+Work dir:
+  /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/work/60/580abe95467b23c100e80e99c126e3
+
+Tip: when you have fixed the problem you can continue the execution appending to the nextflow command line the option `-resume`
+sept.-07 16:06:35.010 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+sept.-07 16:06:35.010 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 16:06:35.013 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `mapping (1)` terminated with an error exit status (1)
+sept.-07 16:06:35.029 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 16:06:35.038 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=310ms; cachedDuration=0ms]
+sept.-07 16:06:35.040 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 16:06:35.088 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 16:06:35.098 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,6 @@
+digraph "workflow" {
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromFilePairs"];
+p1 [shape=point];
+p0 -> p1 [label="fasta"];
+
+}

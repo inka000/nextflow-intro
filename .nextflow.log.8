@@ -1,0 +1,44 @@
+sept.-07 16:08:34.290 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:08:34.323 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 16:08:34.323 [main] DEBUG nextflow.cli.Launcher - $> /home/sdv/m2bi/ileroy/miniconda3/bin/nextflow run coverage.nf
+sept.-07 16:08:34.362 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 16:08:34.369 [main] INFO  nextflow.cli.CmdRun - Launching `coverage.nf` [nice_thompson] - revision: e439c70523
+sept.-07 16:08:34.448 [main] DEBUG nextflow.Session - Session uuid: 615b8979-74b5-4d6f-abf1-3ec2145b96b5
+sept.-07 16:08:34.448 [main] DEBUG nextflow.Session - Run name: nice_thompson
+sept.-07 16:08:34.449 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 16:08:34.461 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 5630@lk-525a-wle-04 [172.20.24.225]
+  CPUs: 4 - Mem: 7,7 GB (2,8 GB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 16:08:34.507 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/work [nfs]
+sept.-07 16:08:34.607 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 16:08:34.612 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 16:08:34.613 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 16:08:34.780 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 16:08:34.797 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/data/; pattern: *{1,2}.fastq.gz; options: [:]
+sept.-07 16:08:34.984 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 16:08:34.984 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 16:08:34.989 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 16:08:34.991 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 16:08:34.994 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 16:08:34.998 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 16:08:34.999 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 16:08:35.004 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 16:08:35.180 [main] DEBUG nextflow.Session - >>> barrier register (process: mapping)
+sept.-07 16:08:35.182 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > mapping -- maxForks: 4
+sept.-07 16:08:35.201 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 16:08:35.201 [main] DEBUG nextflow.Session - Session await
+sept.-07 16:08:35.323 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 16:08:35.327 [Task submitter] INFO  nextflow.Session - [ee/5a0dcd] Submitted process > mapping (1)
+sept.-07 16:08:36.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: mapping (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/ileroy/Documents/nextflow/nextflow-intro/work/ee/5a0dcdcec374cb373971851813782e]
+sept.-07 16:08:36.959 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: mapping)
+sept.-07 16:08:36.959 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 16:08:36.960 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 16:08:36.964 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 16:08:36.979 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=1.6s; failedDuration=0ms; cachedDuration=0ms]
+sept.-07 16:08:37.034 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 16:08:37.044 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

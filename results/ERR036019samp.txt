@@ -1,0 +1,2 @@
+Feature	mean_coverage	median_coverage
+ENA|FN433596|FN433596.1	2.42	2.0

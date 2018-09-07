@@ -1,0 +1,15 @@
+2018-09-07 15:23:49	-	romantic_sax	-	00000000000000000000000000000000	cc92c84f-b6e1-4487-be5e-01f6befb8176	nextflow run coverage.nf -with-dag
+2018-09-07 15:24:18	-	intergalactic_brattain	-	00000000000000000000000000000000	70f5c5a3-baf5-4cf7-a029-7583bb4cf72d	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 15:33:25	-	drunk_shaw	-	78143289fc0b0e1da65b0537f80f22c5	accf94a6-c77f-4b31-8701-50ff3ca7b243	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 15:34:42	941ms	reverent_ampere	OK	35bb860bf69543a7cd27fd17430b42ac	0fb663fa-c867-4421-a1d1-bd8192fb0895	nextflow run coverage.nf -with-dag workflow.nf
+2018-09-07 16:03:25	1.7s	backstabbing_yonath	ERR	5352076aa2ff76e4c76a05689ffd29e7	f25cc1be-84f7-4887-8470-5c138b81729f	nextflow run coverage.nf
+2018-09-07 16:06:33	2.1s	exotic_knuth	ERR	5352076aa2ff76e4c76a05689ffd29e7	6696a5f7-77f2-43a1-bcf7-ae2f975249c5	nextflow run coverage.nf
+2018-09-07 16:08:34	3s	nice_thompson	OK	e439c705233d046505ce139557493e92	615b8979-74b5-4d6f-abf1-3ec2145b96b5	nextflow run coverage.nf
+2018-09-07 16:33:58	-	compassionate_darwin	-	1b881f4a51eaf7d583e5fc2d1cab37cf	c7ddc503-e43e-4c13-9037-6cf810d38ecf	nextflow run coverage.nf
+2018-09-07 16:34:43	4.2s	lonely_nightingale	OK	00d16ecf150f35579a049143845e046f	f9d9954a-ad8f-4a91-95df-e1f9a001a0b0	nextflow run coverage.nf
+2018-09-07 16:41:31	4.5s	fervent_church	OK	84985f8ffcfb0550525d890b2ce82732	79228e88-8874-4133-b798-af9ab864806e	nextflow run coverage.nf
+2018-09-07 16:55:44	12.6s	intergalactic_volta	ERR	c8c888062da4e4a75b32a4cf289f67f8	f28b50ef-871a-4d64-860f-fca408cd8833	nextflow run coverage.nf
+2018-09-07 16:58:04	16.6s	sick_cori	ERR	c8c888062da4e4a75b32a4cf289f67f8	f88a8a54-0463-48b7-b980-92cefb3d22fa	nextflow run coverage.nf
+2018-09-07 17:00:40	14.3s	peaceful_curie	OK	87de11539febd55e7662303c3dcb58d9	92c44253-5526-4b69-a775-0df1283c9733	nextflow run coverage.nf
+2018-09-07 17:03:03	13.4s	ecstatic_hodgkin	OK	669efdae328ad271306d153116f21d66	b85f45f5-ca70-4859-9e2f-6f7f086efe86	nextflow run coverage.nf
+2018-09-07 17:17:31	14.6s	sleepy_davinci	OK	669efdae328ad271306d153116f21d66	56a591b5-10d8-4002-af8e-5335b00dcd7c	nextflow run coverage.nf
